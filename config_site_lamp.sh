@@ -5,12 +5,12 @@ set -e
 # --- Aide ---
 if [ -z "$1" ]; then
     echo "Utilisation : $0 nom_du_projet [--writable] [--ssl] [--mvc] [--tout]"
-    echo "\n\033[31mCe script doit être exécuté en tant que root !\033[0m"
+    printf "\033[31mCe script doit être exécuté en tant que root !\033[0m\n"
     exit 1
 fi
 
 if [[ $EUID -ne 0 ]]; then
-    echo "\033[31mCe script doit être exécuté en tant que root !\033[0m"
+    printf "\033[31mCe script doit être exécuté en tant que root !\033[0m\n"
     exit 1
 fi
 
