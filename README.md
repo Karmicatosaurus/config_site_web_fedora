@@ -1,4 +1,4 @@
-# config_site_lamp_fedora
+# config_site_web_fedora
 Configuration d'un site web sur Fedora
 
 **EN DEVELOPPEMENT - IN DEVELOPMENT**
