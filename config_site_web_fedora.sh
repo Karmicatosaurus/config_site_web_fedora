@@ -53,11 +53,13 @@ if [[ ! -d "$DOSSIER_RACINE" ]]; then
   echo "Création du dossier $DOSSIER_RACINE"
   mkdir -p "$DOSSIER_RACINE"
   chown -Rf "$UTILISATEUR":apache $DOSSIER_RACINE
-elif [[ -d "$DOSSIER_PUB" ]]; then
+fi
+
+if [[ -d "$DOSSIER_PUB" ]]; then
   printf "\033[31mLe dossier %s existe déjà !\033[0m\n" "$DOSSIER_PUB"
   exit 1
 else
- mkdir -p "$DOSSIER_PUB"
+  mkdir -p "$DOSSIER_PUB"
 fi
 
 if $MVC; then
