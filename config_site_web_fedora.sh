@@ -58,6 +58,8 @@ fi
 if [[ -d "$DOSSIER_PUB" ]]; then
   printf "\033[31mLe dossier %s existe déjà !\033[0m\n" "$DOSSIER_PUB"
   exit 1
+else
+ mkdir -p "$DOSSIER_PUB"
 fi
 
 if $MVC; then
